@@ -1,0 +1,59 @@
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+body {
+    margin: 0;
+    background-color: darkred;
+}
+
+.list {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+
+    display: flex;
+    gap: 10px;
+}
+
+.list__item {
+    height: 80vh;
+    border-radius: 20px;
+    flex: 1;
+
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+}
+
+.list__item--active {
+    flex: 10;
+}
+
+.list__item--active .list__title {
+    opacity: 1;
+    transition: 0.4s opacity ease-in 0.4s;
+}
+
+.list__title {
+    font-size: 24px;
+    color: wheat;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    opacity: 0;
+}
